@@ -2,13 +2,13 @@
 
 public abstract class Equipment
 {
-    public string Id { get; }
+    public int Id { get; }
     public string Name { get; }
     public string Producent { get; }
     public EquipmentStatus Status { get; set; }
     public string? UnavailableReason { get; set; }
 
-    protected Equipment(string id, string name, string producent)
+    protected Equipment(int id, string name, string producent)
     {
         Id = id;
         Name = name;

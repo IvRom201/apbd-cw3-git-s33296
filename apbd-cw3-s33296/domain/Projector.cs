@@ -5,7 +5,7 @@ public class Projector : Equipment
     public string Resolution { get; }
     public int Lumens { get; }
 
-    public Projector(string id, string name, string producent, string resolution, int lumens) : base(id, name,
+    public Projector(int id, string name, string producent, string resolution, int lumens) : base(id, name,
         producent)
     {
         Resolution = resolution;

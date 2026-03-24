@@ -6,7 +6,7 @@ public class Laptop : Equipment
     public int Ram { get; set; }
     public bool HasGpu { get; }
     
-    public Laptop(string id, string name, string producent, string processor, int ram, bool hasGpu) : base(id, name, producent)
+    public Laptop(int id, string name, string producent, string processor, int ram, bool hasGpu) : base(id, name, producent)
     {
         Processor = processor;
         Ram = ram;
