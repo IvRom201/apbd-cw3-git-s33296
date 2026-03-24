@@ -1,4 +1,5 @@
 ﻿namespace apbd_cw3_s33296.domain;
+using System;
 
 public abstract class Equipment
 {

@@ -1,8 +1,9 @@
 ﻿namespace apbd_cw3_s33296.domain;
+using  System;
 
 public class Rental
 {
-    public string Id { get; }
+    public int Id { get; }
     public User User { get; }
     public Equipment Equipment { get; }
     public DateTime BorrowedAt { get; }
@@ -15,7 +16,7 @@ public class Rental
     public bool WasReturnedOnTime =>
         ReturnedAt.HasValue && ReturnedAt.Value.Date <= DueDate.Date;
 
-    public Rental(string id, User user, Equipment equipment, DateTime borrowedAt, DateTime dueDate)
+    public Rental(int id, User user, Equipment equipment, DateTime borrowedAt, DateTime dueDate)
     {
         Id = id;
         User = user;
