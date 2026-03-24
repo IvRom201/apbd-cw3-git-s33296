@@ -7,13 +7,13 @@ public abstract class Equipment
     public string Producent { get; }
     public EquipmentStatus Status { get; set; }
     public string? UnavailableReason { get; set; }
-    
-    protected  Equipment(string id, string name, string producent, EquipmentStatus status)
+
+    protected Equipment(string id, string name, string producent)
     {
         Id = id;
         Name = name;
         Producent = producent;
-        Status = status;
+        Status = EquipmentStatus.Available;
     }
 
     public void Rent()
@@ -42,7 +42,8 @@ public abstract class Equipment
     public override string ToString()
     {
         var reasonPart = UnavailableReason is null ? "" : $" | Powód: {UnavailableReason}";
-        return $"{Id} | {Name} | {Producent} | Status: {Status}";
+        return $"{Id} | {Name} | {Producent} | Status: {Status} | {GetSpecificDetails()}{reasonPart}";
     }
-    
+
+    protected abstract string GetSpecificDetails();
 }
